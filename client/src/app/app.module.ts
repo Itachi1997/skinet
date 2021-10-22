@@ -10,6 +10,8 @@ import { HomeModule } from './home/home.module';
 import { ErrorInterceptor } from './core/Interceptors/error.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { LoadingInterceptor } from './core/Interceptors/loading.interceptor';
+import { LoginComponent } from './account/login/login.component';
+import { RegisterComponent } from './account/register/register.component';
 
 @NgModule({
   declarations: [AppComponent],

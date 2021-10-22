@@ -5,25 +5,40 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { PagingHeaderComponent } from './Components/paging-header/paging-header.component';
 import { PagerComponent } from './Components/pager/pager.component';
 import { OrderTotalsComponent } from './Components/order-totals/order-totals.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TextInputComponent } from './Components/text-input/text-input.component';
+
 
 @NgModule({
   declarations: [
     PagingHeaderComponent,
     PagerComponent,
     OrderTotalsComponent,
-    OrderTotalsComponent
+    OrderTotalsComponent,
+    TextInputComponent,
+
   ],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    ReactiveFormsModule,
+    FormsModule,
+    BsDropdownModule.forRoot(),
+
   ],
   exports:[
     PaginationModule,
     PagingHeaderComponent,
     PagerComponent,
     CarouselModule,
-    OrderTotalsComponent
+    OrderTotalsComponent,
+    ReactiveFormsModule,
+    FormsModule,
+    BsDropdownModule,
+    TextInputComponent
   ]
 })
 export class SharedModule {}
