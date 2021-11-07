@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, of, ReplaySubject } from 'rxjs';
 import { delay, map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { IUser } from '../shared/models/User';
 
 @Injectable({
   providedIn: 'root',
@@ -65,5 +64,13 @@ export class AccountService {
     return this.http
       .get(this.baseUrl + 'account/emailexists?email=' + email)
       .pipe(delay(500));
+  }
+
+  getUserAddress(){
+    return this.http.get(this.baseUrl + 'account/address');
+  }
+
+  updateAddress(address){
+    return this.http.put(this.baseUrl + 'account/address',address);
   }
 }
